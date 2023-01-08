@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+}
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+
+.hidden {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "GmarketSansMedium", sans-serif;
+  background-color: #202124;
+  color: white;
+  overflow-x: hidden;
+}
+
+#background {
+  aspect-ratio: auto;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: bg 1s ease;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  padding: 5px 35px;
+}
+
+#clock {
+  font-size: 4rem;
+  font-weight: bolder;
+  border-bottom: 1px solid hsla(210, 16.7%, 97.6%, 0.4);
+  padding: 10px 30px;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px pink;
+}
+
+#weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  text-shadow: 1px 1px 2px pink;
+}
+
+#weather p:last-child {
+  font-size: small;
+  font-weight: lighter;
+}
+
+.box {
+  position: relative;
+  width: 500px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+  border: 1px solid hsla(210, 16.7%, 97.6%, 0.2);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+#greeting {
+  margin-bottom: 1rem;
+  font-size: x-large;
+}
+
+#quote {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: bolder;
+}
+
+#quote p:last-child {
+  font-size: small;
+  font-weight: lighter;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+form button {
+  width: 18%;
+}
+
+form input {
+  width: 78%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: small;
+  color: white;
+  border: 1px solid hsla(210, 16.7%, 97.6%, 0.2);
+  padding: 0.5rem;
+  border-radius: 15px;
+}
+
+input::placeholder {
+  color: hsla(210, 16.7%, 97.6%, 0.5);
+}
+
+form button {
+  border: 1px solid hsla(210, 16.7%, 97.6%, 0.2);
+  padding: 0.5rem;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: small;
+  color: white;
+}
+
+ul {
+  max-height: 40vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  font-size: small;
+  margin-top: 1rem;
+}
+
+@keyframes bg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
